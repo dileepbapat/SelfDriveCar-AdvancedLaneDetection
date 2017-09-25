@@ -152,6 +152,16 @@ right_curverad = ((1 + (2*right_fit_cr[0]*y_eval*ym_per_pix + right_fit_cr[1])**
 print(left_curverad, 'm', right_curverad, 'm')
 ```
 
+To calculate the car position in lane, I used mapping pixel to meter. Difference between center of car from detected
+ lane positions and center of camera will give the offset position.
+ 
+```python
+def offset(txbinary, xy):
+    xm_per_pix = 3.7/700.0
+    return ((xy[1][0] + (xy[3][0] - xy[1][0] )/2) - txbinary.shape[1]/2 )* xm_per_pix
+
+```
+
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
 I implemented this step in the function `plotThePath()`.  Here is an example of my result on a test image:
