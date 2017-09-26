@@ -177,7 +177,7 @@ I implemented this step in the function `plotThePath()`.  Here is an example of 
 
 #### 1. Running above pipeline on image frame by frame on video taken while driving.
 
-Here's a [Processed Video](https://youtu.be/m7T8Eo1yme4) or [Dowload](./output.mp4)
+Here's a [Processed Video](https://youtu.be/k1ioYMEjvmQ) or [Dowload](./output.mp4)
 
 ---
 
